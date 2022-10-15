@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="#fff">
+		<meta name="description"
+		content="Signal SOS message visually. (It's &quot;app&quot; because the term has lost its original meaning.)">
+		<meta name="generator" content="Pete">
+		<meta name="author" content="Pete: pete[at]sosapp.net">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="SOS">
+		<meta name="msapplication-navbutton-color" content="#fff">
+		<meta name="msapplication-starturl" content="https://sosapp.net/">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="SOS">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:creator" content="@kuopassa">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta property="og:title" content="SOS App">
+		<meta property="og:description"
+		content="Signal SOS message visually. (It's &quot;app&quot; because the term has lost its original meaning.)">
+		<meta property="og:url" content="https://sosapp.net/">
+		<meta property="og:image" content="https://sosapp.net/512.png">
+		<meta property="og:image:width" content="512">
+		<meta property="og:image:height" content="512">
+		<meta property="og:locale" content="en">
+		<meta property="og:site_name" content="SOS App">
+		<meta property="og:type" content="website">
+		<link rel="icon" type="image/png" sizes="512x512" href="512.png">
+		<link rel="icon" type="image/png" sizes="256x256" href="256.png">
+		<link rel="icon" type="image/png" sizes="128x128" href="128.png">
+		<link rel="icon" type="image/png" sizes="64x64" href="64.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="32.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="512.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="256x256" href="256.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="128x128" href="128.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="64x64" href="64.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="32x32" href="32.png">
+		<link rel="manifest" href="manifest.json">
+		<title>SOS App</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                height: 100%;
+                background: white;
+                color: black;
+                text-align: center;
+                font-family: monospace;
+            }
+            body {
+                animation-name: sos;
+                animation-duration: 0.75s;
+                animation-iteration-count: infinite;
+                animation-play-state: paused;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
+            }
+            div {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                width: 100%;
+            }
+            h1 {
+                font-size: clamp(20vw,10em,90vw);
+            }
+            @keyframes sos {
+            	0% {
+            		background: white;
+            		color: red;
+            	}
+            	50% {
+                    background: white;
+                    color: red;
+            	}
+            	100% {
+            		background: red;
+            		color: white;
+            	}
+            }
+		</style>
+		<script>
+            document.addEventListener(
+            	'DOMContentLoaded',
+            	function() {
+
+                    document.body.addEventListener(
+                    	'click',
+                    	sos,
+                    	true
+                    );
+
+                    function sos() {
+
+						if (document.body.style.animationPlayState !== 'running') {
+
+                            document.body.style.animationPlayState = 'running';
+						}
+						else {
+
+                            document.body.style.animationPlayState = 'paused';
+						}
+                    }
+                },
+            	false
+            );
+		</script>
+		<script type='application/ld+json'>
+			{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "SOS App",
+			"alternateName": "SOS",
+			"url": "https://sosapp.net/",
+			"description": "Signal SOS message visually.",
+			"accessibilityHazard": ["flashing","motionSimulation"],
+			"accessibilitySummary": "The background can blink in white and red color.",
+			"author": {
+				"@type": "Person",
+				"name": "Pete",
+				"email": "pete[at]sosapp.net"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<main>
+				<h1>SOS</h1>
+			</main>
+		</div>
+	</body>
+</html>
